@@ -3,15 +3,25 @@
 #home {
   text-align: center;
   margin-top: 20px;
+
 }
 
 .carousel-container {
+  position: relative; /* Add relative positioning to the container */
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .carousel-controls {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .carousel-controls button {
@@ -23,10 +33,9 @@
 #left,
 #right {
   flex: 1;
-  // max-width: 300px;
 }
 
-#title-discription {
+#title-description {
   font-size: 1.5rem;
 }
 
@@ -42,7 +51,6 @@
   margin: 1.5% 3%;
   padding-top: 9%;
   padding-bottom: 9%;
-  // padding: 2%;
   box-shadow: $box-shadow;
 }
 

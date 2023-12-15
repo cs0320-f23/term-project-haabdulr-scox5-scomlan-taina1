@@ -14,7 +14,7 @@
   border-radius: $big-border-radius;
 }
 
-Accordion {
+.Accordion {
   min-width: 100%;
   margin: 3%;
 }
@@ -83,20 +83,16 @@ p {
 }
 
 .main-content {
-  // flex: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .sidebar {
-  // width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-self: flex-start;
-
-  // padding: 20px;
 }
 
 .sidebar-button {

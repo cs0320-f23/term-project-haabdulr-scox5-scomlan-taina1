@@ -4,11 +4,11 @@ import Main from "./components/Main.tsx";
 import "./styles/App.scss";
 import Feedback from "./components/feedbackBox.tsx";
 
-// import "./styles/App.scss";
 const App = () => {
   return (
     <div id="page-container">
       <header>
+        {/* Uncomment and update the content as needed */}
         {/* <div>
           <h1>Your Healthcare Inside + Out</h1>
           <p>Answering your health questions post-incarceration</p>

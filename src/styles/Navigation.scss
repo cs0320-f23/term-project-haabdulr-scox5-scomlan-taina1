@@ -4,11 +4,14 @@
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   padding-bottom: 10px;
   padding-top: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-  width: 90%;
+  width: 95%;
   align-items: center;
   background-color: $secondary-background-color;
   border-radius: 0.5 * $big-border-radius;
@@ -18,13 +21,25 @@
   margin: 0 15px;
   text-decoration: none;
   color: #333;
+  transition: color 0.3s;
   // background: white;
   // padding: 0.5%;
   // height: fit-content;
   // flex-wrap: wrap;
   // border: 1px solid white;
   // border-radius: 10px;
+
+  &:hover {
+    color: #888; 
+  }
+
+  &.active {
+      font-weight: bold;
+      color: #00A6C3; // Change to the desired blue color
+
 }
+}
+
 
 .dropdown-content {
   display: none;

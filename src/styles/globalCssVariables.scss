@@ -1,6 +1,6 @@
 // BACKGROUND COLORS
-$primary-background-color: #10c0df;
-$secondary-background-color: #fff;
+$primary-background-color: #ffffff; // Set to white
+$secondary-background-color: #ffffff; // Set to white
 $yellow-background-color: #f1c27e;
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -25,4 +25,19 @@ $big-border-radius: 25px;
   PRIMARY_TEXT_COLOR: $primary-text-color;
 
   // FONTS
+}
+#page-container {
+  background-color: $primary-background-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-container {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
