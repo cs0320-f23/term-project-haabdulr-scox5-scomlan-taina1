@@ -1,63 +1,19 @@
 import React from "react";
 import SubPage from "./SubPage.tsx";
 
-const formQuestions = [
-  { label: "What’s on my mind right now?", name: "onMind" },
-  { label: "What are my goals right now?", name: "goals" },
-  { label: "What will help me reach these goals?", name: "help" },
-  {
-    label:
-      "Person who can help me (write the name of a therapist, counselor, social or case worker, etc.):",
-    name: "person",
-  },
-];
-
 const accordionData = [
   {
-    title: "WHAT is mental health care?",
-    content: (
-      <>
-        Mental health care is taking care of your feelings, thoughts, and
-        actions to make sure that you’re mentally & emotionally well. You might
-        also hear the term “behavioral health care,” which is similar to mental
-        health care but also looks how your actions & behaviors can impact your
-        mental well-being.
-        <br />
-        <br />
-        Mental health care includes a wide range of support services and
-        treatment programs, like peer support groups, where people who have
-        similar experiences listen and talk to each other, counseling,
-        medication, and residential treatment programs (temporary homes where
-        people can get 24/7 care and support).
-      </>
-    ),
+    title: "WHY is primary care important?",
+    content: `
+    Your primary care doctor (PCP) should be your go-to person in the health care system. Because they het to know you well over time, they can provide and refer the best possible care for you.
+
+    Primary care doctors also provide important preventative care services, like disease screening tests and immunizations which can help you stay healthy to avoid health problems later on.    `,
   },
   {
-    title: "WHY is mental health care important?",
-    content: (
-      <>
-        Mental (and behavioral) health care can be helpful for anyone struggling
-        with mental health or substance use. This could be things like{" "}
-        <b>
-          feeling sad or angry for a long time, finding it hard to do everyday
-          activities, having difficulty making and keeping relationships, or
-          other things that affect your life and well-being.
-        </b>{" "}
-        You can benefit from mental health care even if you don’t have a
-        specific name or diagnosis for what you’re going through.
-        <br />
-        <br />
-        Finding support, even if you don’t feel bad now, is important because if
-        you feel worse in the future, you will have a place to go to that knows
-        you and your situation. Mental health providers can help you overcome
-        obstacles and live a healthy life.
-        <b>
-          It is extremely important that you find somewhere that makes you feel
-          comfortable and supported. You should never have to go somewhere that
-          makes you feel worse.
-        </b>
-      </>
-    ),
+    title: "WHO needs a primary care doctor?",
+    content: `
+    Everyone should have a primary care doctor, even if they are not sick or injured.
+    `,
   },
   {
     title: "WHAT is primary care?",
@@ -118,6 +74,17 @@ const accordionData = [
   },
 ];
 
+const formQuestions = [
+  { label: "What’s on my mind right now?", name: "onMind" },
+  { label: "What are my goals right now?", name: "goals" },
+  { label: "What will help me reach these goals?", name: "help" },
+  {
+    label:
+      "Person who can help me (write the name of a therapist, counselor, social or case worker, etc.):",
+    name: "person",
+  },
+];
+
 const initialFormData = {
   onMind: "",
   help: "",
@@ -125,10 +92,10 @@ const initialFormData = {
   person: "",
 };
 
-const MentalHealth = () => {
+const PrimaryCare = () => {
   return (
     <SubPage
-      title="Mental Health"
+      title="Primary Care"
       accordionData={accordionData}
       initialFormData={initialFormData}
       formQuestions={formQuestions}
@@ -136,4 +103,4 @@ const MentalHealth = () => {
   );
 };
 
-export default MentalHealth;
+export default PrimaryCare;
