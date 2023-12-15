@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Accordion from "./accordion.tsx";
+import Accordion from "../accordion.tsx";
 import "../styles/mentalHealth.scss";
 import "../styles/subPage.scss";
 import html2pdf from "html2pdf.js";

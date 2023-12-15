@@ -10,10 +10,10 @@ const Navigation = () => (
     <NavLink className="link" to="/types-of-care">
       Types of Care
       <div className="dropdown-content">
-        <NavLink to="/primary-care">Primary Care</NavLink>
-        <NavLink to="/urgent-care">Urgent Care</NavLink>
-        <NavLink to="/dental-czre">Dental Care</NavLink>
-        <NavLink to="/specialized-care">Specialized Care</NavLink>
+        <NavLink to="/PrimaryCare">Primary Care</NavLink>
+        <NavLink to="/UrgentCare">Urgent Care</NavLink>
+        <NavLink to="/DentalCare">Dental Care</NavLink>
+        <NavLink to="/SpecializedCare">Specialized Care</NavLink>
       </div>
     </NavLink>
     <NavLink className="link" to="/MentalHealth">

@@ -1,5 +1,5 @@
 import React from "react";
-import SubPage from "./SubPage.tsx";
+import SubPage from "../SubPage.tsx";
 
 const accordionData = [
   {
@@ -75,21 +75,62 @@ const accordionData = [
 ];
 
 const formQuestions = [
-  { label: "What’s on my mind right now?", name: "onMind" },
-  { label: "What are my goals right now?", name: "goals" },
-  { label: "What will help me reach these goals?", name: "help" },
+  { label: "NAME OF PRIMARY CARE DOCTOR:", name: "docName", heading: true },
+  { label: "Phone Number:", name: "docNumber" },
+  { label: "Hours:", name: "hours" },
   {
-    label:
-      "Person who can help me (write the name of a therapist, counselor, social or case worker, etc.):",
+    label: "Hospital/Facility/Practice Name:",
     name: "person",
+  },
+  {
+    label: "Address:",
+    name: "address",
+  },
+  {
+    label: "BEFORE MY APPOINTMENT:",
+    heading: true,
+    subheading:
+      "(Use this to prepare for each appointment you have with your primary care doctor.)",
+    name: "before",
+  },
+  {
+    label: "Date of appointment:",
+    name: "date",
+  },
+  {
+    label: "Location:",
+    name: "location",
+  },
+  {
+    label: "How am I getting there?",
+    name: "howGet",
+  },
+  {
+    label: "What do I want to talk about with my primary care doctor?",
+    subheading:
+      "(You can ask your primary care doctor about anything. This may include new symptoms, challenges getting medications or transportation, an unsafe situation, or anything which concerns your health.)",
+    name: "talk",
+  },
+  {
+    label: "DURING MY APPOINTMENT:",
+    heading: true,
+    subheading:
+      "(Here, you can write down answers to your questions and other notes from your conversation with your doctor.)",
+    name: "during",
   },
 ];
 
 const initialFormData = {
-  onMind: "",
-  help: "",
-  goals: "",
+  docName: "",
+  docNumber: "",
   person: "",
+  address: "",
+  before: "",
+  date: "",
+  location: "",
+  howGet: "",
+  talk: "",
+  during: "",
 };
 
 const PrimaryCare = () => {

@@ -80,7 +80,17 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
                 <form className="PDF-form">
                   {formQuestions.map((question, index) => (
                     <label key={index} className="label-form">
-                      <b>{question.label}</b>
+                      <b
+                        style={
+                          question.heading && {
+                            color: "#10c0df",
+                            fontSize: "1.5em",
+                          }
+                        }
+                      >
+                        {question.label}
+                      </b>
+                      <i>{question.subheading}</i>
                       <textarea
                         className="text-form"
                         name={question.name}
