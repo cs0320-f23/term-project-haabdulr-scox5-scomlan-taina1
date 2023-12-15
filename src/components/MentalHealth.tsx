@@ -92,6 +92,7 @@ const MentalHealth = () => {
    * scrolls down to the notes section
    */
   const handleScrollToNotes = () => {
+    setIsCollapsed(false);
     const showNotesSection = document.getElementById("show-notes-button");
 
     if (showNotesSection) {
@@ -146,13 +147,13 @@ const MentalHealth = () => {
               📝 Take Notes
             </button>
             <button className="sidebar-button" onClick={() => window.print()}>
-              🖨️ Print
+              🖨️ Print <br></br>Entire Page
             </button>
             <button
               className="sidebar-button"
               onClick={() => console.log("Download")}
             >
-              📥 Download
+              📥 Download <br></br> Notes
             </button>
           </div>
         </div>
@@ -171,13 +172,13 @@ const MentalHealth = () => {
             <div className="PDF-container">
               {/* PDF content goes here */}
               <div className="PDF-header">
-                <h1>My Notes</h1>
-                <h2>MENTAL HEALTH & SUBSTANCE USE</h2>
+                <h1 id="title-PDF">My Notes</h1>
+                <h2 id="subtitle-PDF">Mental Health & Substance Use</h2>
               </div>
               <div className="PDF-content">
                 <form className="PDF-form">
                   <label className="mental-label">
-                    <span>What’s on my mind right now?</span>
+                    <b>What’s on my mind right now?</b>
                     <textarea
                       className="text-mental"
                       name="onMind"
@@ -186,7 +187,7 @@ const MentalHealth = () => {
                     />
                   </label>
                   <label className="mental-label">
-                    What are my goals right now?
+                    <b>What are my goals right now?</b>
                     <textarea
                       className="text-mental"
                       name="goals"
@@ -195,7 +196,7 @@ const MentalHealth = () => {
                     />
                   </label>
                   <label className="mental-label">
-                    What will help me reach these goals?
+                    <b>What will help me reach these goals?</b>
                     <textarea
                       className="text-mental"
                       name="help"
@@ -204,8 +205,10 @@ const MentalHealth = () => {
                     />
                   </label>
                   <label className="mental-label">
-                    Person who can help me (write the name of a therapist,
-                    counselor, social or case worker, etc.):
+                    <b>
+                      Person who can help me (write the name of a therapist,
+                      counselor, social or case worker, etc.):
+                    </b>
                     <textarea
                       name="person"
                       value={formData.person}

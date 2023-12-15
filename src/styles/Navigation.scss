@@ -1,23 +1,5 @@
 @import "./globalCssVariables.scss";
 
-// nav {
-//   display: flex;
-//   flex-direction: row;
-//   // background-color: $secondary-background-color;
-//   margin: auto;
-//   justify-content: center;
-//   padding: 1%;
-//   width: 100%;
-// }
-
-// .link {
-//   padding-left: 3%;
-//   padding-right: 3%;
-//   font-size: larger;
-//   font-weight: bolder;
-//   color: $primary-text-color;
-// }
-
 .centered-navigation {
   display: flex;
   justify-content: center;
@@ -86,7 +68,6 @@
   color: #333;
 }
 .auth-buttons .login {
-  // margin-inline: 4%;
   padding: 3%;
   padding-inline: 10px;
   background-color: $yellow-background-color;
