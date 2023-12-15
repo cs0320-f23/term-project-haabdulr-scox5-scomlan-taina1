@@ -1,9 +1,16 @@
-import React, { useState } from "react";
-import Accordion from "./accordion.tsx";
-import "../styles/mentalHealth.scss";
-import "../styles/subPage.scss";
-import primarycare from "../images/PrimaryCare.png";
-import html2pdf from "html2pdf.js";
+import React from "react";
+import SubPage from "./SubPage.tsx";
+
+const formQuestions = [
+  { label: "What’s on my mind right now?", name: "onMind" },
+  { label: "What are my goals right now?", name: "goals" },
+  { label: "What will help me reach these goals?", name: "help" },
+  {
+    label:
+      "Person who can help me (write the name of a therapist, counselor, social or case worker, etc.):",
+    name: "person",
+  },
+];
 
 const accordionData = [
   {
@@ -78,172 +85,21 @@ const accordionData = [
   },
 ];
 
+const initialFormData = {
+  onMind: "",
+  help: "",
+  goals: "",
+  person: "",
+};
+
 const MentalHealth = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  /**
-   * collapses or uncollapses the notes
-   */
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
-  /**
-   * scrolls down to the notes section
-   */
-  const handleScrollToNotes = () => {
-    setIsCollapsed(false);
-    const showNotesSection = document.getElementById("show-notes-button");
-
-    if (showNotesSection) {
-      showNotesSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  /**
-   * for downloading the PDF
-   */
-  const handleDownloadPDF = () => {
-    const content = document.getElementById("formContent");
-
-    if (content) {
-      html2pdf(content);
-    }
-  };
-
-  /**
-   * the initial state of the form/PDF's data. the format is field name: "value"
-   */
-  const [formData, setFormData] = useState({
-    onMind: "",
-    help: "",
-    goals: "",
-    person: "",
-  });
-
-  /**
-   * keeps the input box content updated as the user types
-   */
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
   return (
-    <div className="sub-page-container">
-      <header>
-        <h1>Mental Health</h1>
-      </header>
-      <div className="main-content">
-        <div className="data-and-sidebar">
-          <Accordion sections={accordionData} />
-          <div className="sidebar">
-            <button className="sidebar-button" onClick={handleScrollToNotes}>
-              📝 Take Notes
-            </button>
-            <button className="sidebar-button" onClick={() => window.print()}>
-              🖨️ Print <br></br>Entire Page
-            </button>
-            <button
-              className="sidebar-button"
-              onClick={() => console.log("Download")}
-            >
-              📥 Download <br></br> Notes
-            </button>
-          </div>
-        </div>
-        <div className="PDF">
-          {/* Dropdown button */}
-          <button
-            onClick={toggleCollapse}
-            className="sidebar-button"
-            id="show-notes-button"
-          >
-            Show Notes
-          </button>
-
-          {/* Collapsible div */}
-          {!isCollapsed && (
-            <div className="PDF-container">
-              {/* PDF content goes here */}
-              <div className="PDF-header">
-                <h1 id="title-PDF">My Notes</h1>
-                <h2 id="subtitle-PDF">Mental Health & Substance Use</h2>
-              </div>
-              <div className="PDF-content">
-                <form className="PDF-form">
-                  <label className="mental-label">
-                    <b>What’s on my mind right now?</b>
-                    <textarea
-                      className="text-mental"
-                      name="onMind"
-                      value={formData.onMind}
-                      onChange={handleInputChange}
-                    />
-                  </label>
-                  <label className="mental-label">
-                    <b>What are my goals right now?</b>
-                    <textarea
-                      className="text-mental"
-                      name="goals"
-                      value={formData.goals}
-                      onChange={handleInputChange}
-                    />
-                  </label>
-                  <label className="mental-label">
-                    <b>What will help me reach these goals?</b>
-                    <textarea
-                      className="text-mental"
-                      name="help"
-                      value={formData.help}
-                      onChange={handleInputChange}
-                    />
-                  </label>
-                  <label className="mental-label">
-                    <b>
-                      Person who can help me (write the name of a therapist,
-                      counselor, social or case worker, etc.):
-                    </b>
-                    <textarea
-                      name="person"
-                      value={formData.person}
-                      onChange={handleInputChange}
-                    />
-                  </label>
-                </form>
-
-                {/* <button onClick={handleDownloadPDF}>
-                    Download PDF of Notes (preview below)
-                  </button>
-
-                  <div id="formContent">
-                    Content to be included in the PDF
-                    <h2>Downloadable Notes</h2>
-                    <p>
-                      <b>What’s on my mind right now? </b> {formData.onMind}
-                    </p>
-                    <p>
-                      <b>What are my goals right now? </b> {formData.goals}
-                    </p>
-                    <p>
-                      <b>What will help me reach these goals? </b>{" "}
-                      {formData.help}
-                    </p>
-                    <p>
-                      <b>Person who can help me: </b> {formData.person}
-                    </p>
-                  </div> */}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
+    <SubPage
+      title="Mental Health"
+      accordionData={accordionData}
+      initialFormData={initialFormData}
+      formQuestions={formQuestions}
+    />
   );
 };
 

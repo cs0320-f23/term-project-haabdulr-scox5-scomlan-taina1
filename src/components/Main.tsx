@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import MentalHealth from "./MentalHealth.tsx";
+// import MentalHealth from "./OldMentalHealth.tsx";
 import Home from "./Home.tsx";
+import MentalHealth from "./MentalHealth.tsx";
 
 const Main = () => (
   <Routes>

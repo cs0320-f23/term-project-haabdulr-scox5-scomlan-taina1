@@ -28,11 +28,14 @@ Accordion {
 }
 
 .PDF-container {
-  // margin-left: 1%;
+  flex-direction: column;
   margin-top: 3%;
-  border: 4px solid $primary-background-color;
-  border-radius: $big-border-radius;
+  border: 4px solid #10c0df;
+  border-radius: 25px;
   padding: 30px;
+  width: 70%;
+  display: flex;
+  align-self: center;
 }
 
 #title-PDF {
@@ -55,4 +58,65 @@ Accordion {
   font-weight: bold;
   width: 80%;
   align-self: center;
+  margin-top: 4%;
+}
+
+.text-form {
+  width: 75%;
+  height: 8vh;
+  font-family: $general-font;
+  padding: 1.5%;
+}
+
+.label-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+  gap: 10px;
+  width: 100%;
+}
+
+p {
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  // flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar {
+  // width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+
+  // padding: 20px;
+}
+
+.sidebar-button {
+  margin-bottom: 10px;
+  font-size: larger;
+  width: 100%;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.data-and-sidebar {
+  display: flex;
+  width: 100%;
+}
+
+.PDF-form {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
 }
