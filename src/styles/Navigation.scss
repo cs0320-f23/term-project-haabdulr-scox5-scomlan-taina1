@@ -1,0 +1,95 @@
+@import "./globalCssVariables.scss";
+
+// nav {
+//   display: flex;
+//   flex-direction: row;
+//   // background-color: $secondary-background-color;
+//   margin: auto;
+//   justify-content: center;
+//   padding: 1%;
+//   width: 100%;
+// }
+
+// .link {
+//   padding-left: 3%;
+//   padding-right: 3%;
+//   font-size: larger;
+//   font-weight: bolder;
+//   color: $primary-text-color;
+// }
+
+.centered-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  width: 90%;
+  align-items: center;
+  background-color: $secondary-background-color;
+  border-radius: 0.5 * $big-border-radius;
+}
+
+.link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  // background: white;
+  // padding: 0.5%;
+  // height: fit-content;
+  // flex-wrap: wrap;
+  // border: 1px solid white;
+  // border-radius: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.link:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.search-container {
+  margin-left: 15px;
+}
+
+.search-container input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.auth-buttons .link {
+  text-decoration: none;
+  color: #333;
+}
+.auth-buttons .login {
+  // margin-inline: 4%;
+  padding: 3%;
+  padding-inline: 10px;
+  background-color: $yellow-background-color;
+  border-radius: 6px;
+  font-weight: bold;
+}

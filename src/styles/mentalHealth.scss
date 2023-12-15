@@ -1,0 +1,77 @@
+.main-content {
+  // flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar {
+  // width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+
+  // padding: 20px;
+}
+
+.sidebar-button {
+  margin-bottom: 10px;
+  font-size: larger;
+  width: 100%;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.data-and-sidebar {
+  display: flex;
+  width: 100%;
+}
+
+.PDF-form {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.mental-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+  gap: 10px;
+}
+
+.text-mental {
+  width: 200%;
+  height: 40%;
+}
+
+p {
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-fields {
+  position: absolute;
+
+  input {
+    padding: 0.5em; // Adjust as needed
+    font-size: 1em;
+    border: 1px #ccc;
+    border-radius: 4px;
+
+    &.text1 {
+      top: 1000%;
+      left: 200%;
+    }
+
+    &.text2 {
+      top: 30%;
+      left: 40%;
+    }
+  }
+}

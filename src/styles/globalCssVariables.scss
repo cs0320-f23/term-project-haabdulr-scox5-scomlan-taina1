@@ -1,0 +1,28 @@
+// BACKGROUND COLORS
+$primary-background-color: #10c0df;
+$secondary-background-color: #fff;
+$yellow-background-color: #f1c27e;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// TEXT COLORS
+$primary-text-color: black;
+
+// FONTS
+// $header-font: "Inter", sans-serif;
+
+$general-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+// SIZES
+$header-height: 50px;
+$big-border-radius: 25px;
+
+:export {
+  // BACKGROUND COLORS
+  PRIMARY_BACKGROUND_COLOR: $primary-background-color;
+
+  // TEXT COLORS
+  PRIMARY_TEXT_COLOR: $primary-text-color;
+
+  // FONTS
+}
