@@ -74,63 +74,72 @@ const accordionData = [
   },
 ];
 
+/**
+ * the labels for each question (if a label is not a heading, it will be followd by an input box. if it is a heading, it will appear bigger and not followed by an input box)
+ * the "name" field is useful for accessig the corresponding field in the formData dictionary
+ */
 const formQuestions = [
-  { label: "NAME OF PRIMARY CARE DOCTOR:", name: "docName", heading: true },
-  { label: "Phone Number:", name: "docNumber" },
+  {
+    label: "NAME OF PRIMARY CARE DOCTOR:",
+    name: "primaryCareDoctor",
+    heading: true,
+  },
+  { label: "Phone Number:", name: "phoneNumber" },
   { label: "Hours:", name: "hours" },
   {
     label: "Hospital/Facility/Practice Name:",
-    name: "person",
+    name: "hospitalName",
   },
   {
     label: "Address:",
-    name: "address",
+    name: "hospitalAddress",
   },
   {
     label: "BEFORE MY APPOINTMENT:",
     heading: true,
     subheading:
       "(Use this to prepare for each appointment you have with your primary care doctor.)",
-    name: "before",
+    name: "beforeAppointment",
   },
   {
     label: "Date of appointment:",
-    name: "date",
+    name: "appointmentDate",
   },
   {
     label: "Location:",
-    name: "location",
+    name: "appointmentLocation",
   },
   {
     label: "How am I getting there?",
-    name: "howGet",
+    name: "transportation",
   },
   {
     label: "What do I want to talk about with my primary care doctor?",
     subheading:
       "(You can ask your primary care doctor about anything. This may include new symptoms, challenges getting medications or transportation, an unsafe situation, or anything which concerns your health.)",
-    name: "talk",
+    name: "topicsToDiscuss",
   },
   {
     label: "DURING MY APPOINTMENT:",
     heading: true,
     subheading:
       "(Here, you can write down answers to your questions and other notes from your conversation with your doctor.)",
-    name: "during",
+    name: "duringAppointment",
   },
 ];
 
 const initialFormData = {
-  docName: "",
-  docNumber: "",
-  person: "",
-  address: "",
-  before: "",
-  date: "",
-  location: "",
-  howGet: "",
-  talk: "",
-  during: "",
+  primaryCareDoctor: "",
+  phoneNumber: "",
+  hours: "",
+  beforeAppointment: "",
+  hospitalName: "",
+  hospitalAddress: "",
+  appointmentDate: "",
+  appointmentLocation: "",
+  topicsToDiscuss: "",
+  transportation: "",
+  duringAppointment: "",
 };
 
 const PrimaryCare = () => {
