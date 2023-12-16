@@ -91,12 +91,14 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
                         {question.label}
                       </b>
                       <i>{question.subheading}</i>
-                      <textarea
-                        className="text-form"
-                        name={question.name}
-                        value={formData[question.name]}
-                        onChange={handleInputChange}
-                      />
+                      {!question.heading && (
+                        <textarea
+                          className="text-form"
+                          name={question.name}
+                          value={formData[question.name]}
+                          onChange={handleInputChange}
+                        />
+                      )}
                     </label>
                   ))}
                 </form>

@@ -79,10 +79,10 @@ const accordionData = [
  * the "name" field is useful for accessig the corresponding field in the formData dictionary
  */
 const formQuestions = [
+  { label: "PRIMARY CARE DOCTOR INFORMATION:", heading: true },
   {
-    label: "NAME OF PRIMARY CARE DOCTOR:",
+    label: "Name of primary care doctor:",
     name: "primaryCareDoctor",
-    heading: true,
   },
   { label: "Phone Number:", name: "phoneNumber" },
   { label: "Hours:", name: "hours" },
