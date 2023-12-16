@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../styles/home.scss";
 import Tour from 'reactour'
+import "./Navigation.tsx"; 
+import "./feedbackBox.tsx"; 
+
 
 const Home: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -39,14 +42,15 @@ const Home: React.FC = () => {
     
     (
       <div>
-        <p className="first-text">Taking care of your health is long-term, but here are steps to take,</p>
+        <p className="first-text">Taking care of your health is long-term, but here are steps to take ,</p>
         <p className="red-text">
-         RIGHT NOW.
+
+
         </p>
       </div>
     ),
   },
-
+ 
 ];
 
   const handleNextSlide = () => {
@@ -69,18 +73,21 @@ const Home: React.FC = () => {
 
   const steps = [
     {
-      selector: '#title', // Adjust the selector as per your requirement
-      content: 'This is the title section',
+      selector: '#title', 
+      content: 'This an explanation as to what the importance of the website.',
     },
     {
-      selector: '#left', // Adjust the selector as per your requirement
-      content: 'This is the left section',
+      selector: '.centered-navigation',
+      content: "Use the navigation bar to go through the pages based on what you are looking for. Right Now you're on the home page and you know this because it's blue.",
     },
     {
-      selector: '#right', // Adjust the selector as per your requirement
-      content: 'This is the right section',
+      selector: '.auth-buttons', 
+      content: "For first time users, sign up here. For returning users, login in.",
     },
-    // Add more steps as needed
+    {
+      selector: '#feedback-box',
+      content: 'Let us know what you think about the site.',
+    },
   ];
 
 
