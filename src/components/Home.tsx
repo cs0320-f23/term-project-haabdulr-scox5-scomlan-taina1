@@ -91,7 +91,6 @@ const Home: React.FC = () => {
   ];
 
 
-
   return (
     <div id="home">
       <div className="carousel-container">
