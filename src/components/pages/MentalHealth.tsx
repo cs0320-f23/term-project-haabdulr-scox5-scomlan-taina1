@@ -2,20 +2,14 @@ import React from "react";
 import SubPage from "../SubPage.tsx";
 
 const formQuestions = [
-  { label: "Name of Primary Care Doctor:", name: "primaryCareDoctor" },
-  { label: "Phone Number:", name: "phoneNumber" },
-  { label: "Hours:", name: "hours" },
-  { label: "Before My Appointment:", name: "beforeAppointment" },
-  { label: "Hospital/Facility/Practice Name:", name: "hospitalName" },
-  { label: "Address:", name: "hospitalAddress" },
-  { label: "Date of Appointment:", name: "appointmentDate" },
-  { label: "Location:", name: "appointmentLocation" },
+  { label: "What’s on my mind right now?", name: "onMind" },
+  { label: "What are my goals right now?", name: "goals" },
+  { label: "What will help me reach these goals?", name: "help" },
   {
-    label: "What do I want to talk about with my primary care doctor?",
-    name: "topicsToDiscuss",
+    label:
+      "Person who can help me (write the name of a therapist, counselor, social or case worker, etc.):",
+    name: "person",
   },
-  { label: "How am I getting there?", name: "transportation" },
-  { label: "During My Appointment:", name: "duringAppointment" },
 ];
 
 const accordionData = [
@@ -117,17 +111,10 @@ const accordionData = [
 ];
 
 const initialFormData = {
-  primaryCareDoctor: "",
-  phoneNumber: "",
-  hours: "",
-  beforeAppointment: "",
-  hospitalName: "",
-  hospitalAddress: "",
-  appointmentDate: "",
-  appointmentLocation: "",
-  topicsToDiscuss: "",
-  transportation: "",
-  duringAppointment: "",
+  onMind: "",
+  help: "",
+  goals: "",
+  person: "",
 };
 
 const MentalHealth = () => {
