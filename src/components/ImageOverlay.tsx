@@ -1,29 +1,44 @@
-// ImageOverlay.tsx
-import React, { FC } from "react";
-import "./ImageOverlay.scss";
+import React, { useState } from "react";
+import "../styles/imageOverlay.scss";
 
 interface ImageOverlayProps {
-  baseImageUrl: string;
-  text: string;
-  imageOverlayUrl: string;
+  imageUrl: string;
+  textAreas: { text: string; position: { x: number; y: number } }[];
 }
 
-const ImageOverlay: FC<ImageOverlayProps> = ({
-  baseImageUrl,
-  text,
-  imageOverlayUrl,
-}) => {
+const ImageOverlay: React.FC<ImageOverlayProps> = ({ imageUrl, textAreas }) => {
+  const [clickedAreas, setClickedAreas] = useState<number[]>([]);
+
+  const handleAreaClick = (index: number) => {
+    setClickedAreas((prevClickedAreas) =>
+      prevClickedAreas.includes(index)
+        ? prevClickedAreas.filter((areaIndex) => areaIndex !== index)
+        : [...prevClickedAreas, index]
+    );
+  };
+
   return (
-    <div className="image-overlay-container">
-      <img src={baseImageUrl} alt="Base Image" className="base-image" />
-      <div className="overlay-content">
-        <p className="overlay-text">{text}</p>
-        <img
-          src={imageOverlayUrl}
-          alt="Image Overlay"
-          className="image-overlay"
-        />
-      </div>
+    <div className="image-wrapper">
+      <img
+        src={imageUrl}
+        alt="Doctor's office"
+        style={{ width: "100%", height: "100%" }}
+      />
+      {textAreas.map((area, index) => (
+        <div
+          key={index}
+          onClick={() => handleAreaClick(index)}
+          className="highlighted-areas"
+          style={{
+            top: `${area.position.y}%`,
+            left: `${area.position.x}%`,
+          }}
+        >
+          {clickedAreas.includes(index) && (
+            <span className="highlighted-text">{area.text}</span>
+          )}
+        </div>
+      ))}
     </div>
   );
 };

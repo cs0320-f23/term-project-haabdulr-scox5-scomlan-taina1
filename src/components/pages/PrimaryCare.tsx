@@ -1,6 +1,33 @@
 import React from "react";
 import SubPage from "../SubPage.tsx";
+import InteractiveImage from "../InteractiveImage.tsx";
+import ImageOverlay from "../ImageOverlay.tsx";
+import primaryOffice from "../../images/PrimaryCareOffice.png";
 
+/**
+ * the highlighted areas on the image in the section titled "What does a primary care visit look like?"
+ */
+const textAreas = [
+  {
+    text: "At each visit, your PCP will check in with you about your medications. Be open with them about any issues you've been having, so you can adjust accordingly.",
+    position: { x: 90, y: 44 },
+  },
+  {
+    text: "Your PCP will track things like height, weight, blood pressure, and vision over time. This way, they'll know when something is off.",
+    position: { x: 22, y: 30 },
+  },
+  {
+    text: "Your PCP will do a physical exam. Tell them if anything makes you uncomfortable.",
+    position: { x: 53, y: 45 },
+  },
+  {
+    text: "The most important part of your PCP visit is talking to your doctor. They'll ask you many questions, but always make sure to ask your questions as well.",
+    position: { x: 78, y: 80 },
+  },
+  // Add more text areas as needed
+];
+
+const overlay = <ImageOverlay imageUrl={primaryOffice} textAreas={textAreas} />;
 /**
  * To change the dropdown menu information, edit here.
  * the "content" field can be in HTML or it can just be a string
@@ -125,6 +152,7 @@ const accordionData = [
   },
   {
     title: "TIPS & TRICKS",
+
     content: (
       <ul>
         <li>
@@ -184,10 +212,13 @@ const accordionData = [
   },
   {
     title: "WHAT does a primary care visit look like?",
-    content: `
-      Aliquam vel libero et tortor sagittis condimentum. Nam id varius turpis, id pharetra eros. Mauris purus tortor, mattis quis eros in, molestie pharetra lorem. Morbi viverra urna purus, nec ornare purus aliquet et. Curabitur tempus nulla id leo eleifend, sit amet lobortis libero interdum. Proin nulla neque, imperdiet nec metus in, volutpat accumsan sem. Curabitur imperdiet et turpis at condimentum. Nunc nec quam fringilla, porta elit nec, pellentesque ligula.
-
-    `,
+    content: (
+      <>
+        <b>Click</b> the colored areas on the image to learn more. Click on an
+        area again to hide the text.
+        {overlay}
+      </>
+    ),
   },
 ];
 
