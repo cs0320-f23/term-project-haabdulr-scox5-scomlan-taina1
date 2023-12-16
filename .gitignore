@@ -23,3 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 /src/extra-from-merge-conflict
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
