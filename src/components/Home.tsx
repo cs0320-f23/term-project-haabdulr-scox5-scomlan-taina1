@@ -13,15 +13,41 @@ const Home: React.FC = () => {
       title: "Your Healthcare Inside + Out",
       description: "Answering your health questions post-incarceration",
     },
+
     {
-      title: "Slide 2 Title",
-      description: "Slide 2 Description",
-    },
-    {
-      title: "Slide 3 Title",
-      description: "Slide 3 Description",
-    },
-  ];
+    title: "WHY?",
+    description: (
+      <div>
+        <p className="blue-text">Your health is important,</p>
+        <p className="rest-of-paragraph">
+          but finding your way through the medical system isn't easy. Finding
+          medical services can be expensive, getting insurance can be intimidating,
+          finding doctors can be frustrating, and getting a check-up might be the
+          last thing on your mind. This guide will give you the tools to overcome
+          these barriers, take advantage of the resources available in Rhode
+          Island, and get the care that you deserve. Staying healthy is the
+          foundation to building a successful return to your community.
+        </p>
+      </div>
+    ),
+  },
+
+
+  {
+    title: "WHEN?",
+    description: 
+    
+    (
+      <div>
+        <p className="first-text">Taking care of your health is long-term, but here are steps to take,</p>
+        <p className="red-text">
+         RIGHT NOW.
+        </p>
+      </div>
+    ),
+  },
+
+];
 
   const handleNextSlide = () => {
     setActiveSlide((prevSlide) => (prevSlide + 1) % carouselData.length);
@@ -67,8 +93,8 @@ const Home: React.FC = () => {
           <p id="title-description">{carouselData[activeSlide].description}</p>
         </div>
         <div className="carousel-controls">
-          <button onClick={handlePrevSlide}>&#x27A5;</button>
-          <button onClick={handleNextSlide}>&#x27A4;</button>
+          <button onClick={handlePrevSlide}>&#x2329;</button>
+          <button onClick={handleNextSlide}>&#x232A;</button>
         </div>
       </div>
       <div id="sub-items-home">

@@ -20,6 +20,8 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // padding-bottom: 1000px;
+
 }
 
 .carousel-controls {
@@ -30,11 +32,19 @@ ol {
   transform: translateY(-50%);
   width: 100%;
 }
-
 .carousel-controls button {
-  font-size: 24px;
-  margin: 0 10px;
+  font-size: 30px;
   cursor: pointer;
+  color: #94e2f0;
+  background-color: transparent; 
+  border: none; 
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+
+  &:hover {
+    color: #06a6c3; 
+    font-weight: bold; 
+  }
 }
 
 #left,
@@ -44,22 +54,68 @@ ol {
 
 #title-description {
   font-size: 1.5rem;
+  font-family: Arial;
+  padding-right: 10%;
+  padding-left: 10%;
+  letter-spacing: -0.5px;
+
+
 }
 
-#title {
+#title { //this is also where the box/carousel is designed
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: Anton;
+
+  align-items: center; 
   text-align: center;
   background-color: $secondary-background-color;
   width: 90%;
+  // font-size: 1.5rem;
+  font-weight: light;
+  color: #000;
+
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  // font-weight: 400;
+  line-height: 24px; /* 40% */
+  letter-spacing: -1.5px;
+
+
   align-self: center;
   border-radius: $big-border-radius;
   margin: 1.5% 3%;
   padding-top: 9%;
-  padding-bottom: 9%;
+  padding-bottom: 30%;
   box-shadow: $box-shadow;
 }
+
+.blue-text {
+  color: #07BAD9;
+  display: inline; 
+  font-weight: bold;
+
+}
+
+.rest-of-paragraph {
+  display: inline; // Make it inline
+}
+
+
+.first-text {
+  color: black;
+  display: inline; 
+}
+
+.red-text{
+  color: rgb(228, 5, 5);
+  display: inline; 
+  font-weight: bold;
+}
+
+
 
 #home {
   height: 100%;
