@@ -22,7 +22,7 @@ const Navigation = () => (
     <NavLink className="link" to="/MedicalRecords">
       Medical Records
     </NavLink>
-    <NavLink className="link" to="/Prescription Medication">
+    <NavLink className="link" to="/PrescriptionMedication">
       Prescription Medication
     </NavLink>
     <NavLink className="link" to="/Telehealth">
