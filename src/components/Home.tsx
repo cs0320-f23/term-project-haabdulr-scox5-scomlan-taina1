@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "../styles/home.scss";
+import Tour from 'reactour'
 
-const Home = () => {
+const Home: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isTourOpen, setIsTourOpen] = useState(true);
+
+
 
   const carouselData = [
     {
@@ -28,6 +32,32 @@ const Home = () => {
       prevSlide === 0 ? carouselData.length - 1 : prevSlide - 1
     );
   };
+
+  const openTour = () => {
+    setIsTourOpen(true);
+  };
+
+  const closeTour = () => {
+    setIsTourOpen(false);
+  };
+
+  const steps = [
+    {
+      selector: '#title', // Adjust the selector as per your requirement
+      content: 'This is the title section',
+    },
+    {
+      selector: '#left', // Adjust the selector as per your requirement
+      content: 'This is the left section',
+    },
+    {
+      selector: '#right', // Adjust the selector as per your requirement
+      content: 'This is the right section',
+    },
+    // Add more steps as needed
+  ];
+
+
 
   return (
     <div id="home">
@@ -87,6 +117,11 @@ const Home = () => {
           </ol>
         </div>
       </div>
+      <Tour
+        steps={steps}
+        isOpen={isTourOpen}
+        onRequestClose={() => setIsTourOpen(false)}
+      />
     </div>
   );
 };
