@@ -43,7 +43,7 @@ const Home: React.FC = () => {
     (
       <div>
         <p className="first-text">Taking care of your health is long-term, but here are steps to take ,</p>
-        <p className="red-text">
+        <p className="red-text"> RIGHT NOW.
 
 
         </p>
@@ -63,13 +63,7 @@ const Home: React.FC = () => {
     );
   };
 
-  const openTour = () => {
-    setIsTourOpen(true);
-  };
 
-  const closeTour = () => {
-    setIsTourOpen(false);
-  };
 
   const steps = [
     {

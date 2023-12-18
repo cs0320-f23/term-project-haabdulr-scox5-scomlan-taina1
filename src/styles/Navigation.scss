@@ -22,6 +22,7 @@
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
+  font-family: Arial;
   // background: white;
   // padding: 0.5%;
   // height: fit-content;
@@ -51,6 +52,7 @@
 
 .link:hover .dropdown-content {
   display: block;
+  font-family: Arial;
 }
 
 .dropdown-content a {
