@@ -3,7 +3,9 @@ import Navigation from "./components/Navigation.tsx";
 import Main from "./components/Main.tsx";
 import "./styles/App.scss";
 import Feedback from "./components/feedbackBox.tsx";
-
+function App() {
+  const [registerEmail, setRegisterEmail]
+}
 const App = () => {
   return (
     <div id="page-container">

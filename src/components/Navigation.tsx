@@ -1,8 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navigation.scss";
+import { auth, handleSignUp, handleSignIn, handleLogout } from '../firebase'
 
-const Navigation = () => (
+
+
+const Navigation = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogout = () => {
+    auth.signOut();
+  };
+
+  const handleLogin = async () => {
+    // Implement login logic using Firebase
+   
+  };
+
+  const handleSignup = async () => {
+    // Implement signup logic using Firebase
+    
+  };
+  
   <nav className="centered-navigation">
     <NavLink className="link" to="/">
       Home
@@ -41,6 +61,6 @@ const Navigation = () => (
       </NavLink>
     </div>
   </nav>
-);
+};
 
 export default Navigation;
