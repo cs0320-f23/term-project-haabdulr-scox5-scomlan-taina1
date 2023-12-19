@@ -58,5 +58,12 @@
     "@types/node": "^20.10.4",
     "@types/reactour": "^1.18.5",
     "style-loader": "^3.3.3"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC"
 }
