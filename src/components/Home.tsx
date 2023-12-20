@@ -44,10 +44,10 @@ const Home: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleNextSlide();
-    }, 5000); 
+    }, 5000);
 
     return () => clearInterval(intervalId);
-  }, [activeSlide]);
+  }, [activeSlide, handleNextSlide]);
 
   const steps = [
     {
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
     },
     {
       selector: '.centered-navigation',
-      content: "Use the navigation bar to go through the pages based on what you are looking for. Right Now you're on the home page and you know this because it's blue.",
+      content: "Use the navigation bar to go through the pages based on what you are looking for. Right Now you're on the home page and you know this because it's bolded and black.",
     },
     {
       selector: '.auth-buttons', 

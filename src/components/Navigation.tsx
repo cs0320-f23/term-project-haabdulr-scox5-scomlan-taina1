@@ -4,13 +4,13 @@ import "../styles/Navigation.scss";
 
 const Navigation = () => (
   <nav className="centered-navigation">
-          <div className="logo">
-        <img src="https://www.transitionalhousing.org/gallery/2960_amoshouse_com.jpg" alt="Logo" />
-      </div>
+    <div className="logo">
+      <img src="https://www.transitionalhousing.org/gallery/2960_amoshouse_com.jpg" alt="Logo" />
+    </div>
     <NavLink className="link" to="/">
       Home
     </NavLink>
-    <NavLink className="link" to="/types-of-care">
+    <div className="link with-dropdown">
       Types of Care
       <div className="dropdown-content">
         <NavLink to="/PrimaryCare">Primary Care</NavLink>
@@ -18,7 +18,7 @@ const Navigation = () => (
         <NavLink to="/DentalCare">Dental Care</NavLink>
         <NavLink to="/SpecializedCare">Specialized Care</NavLink>
       </div>
-    </NavLink>
+    </div>
     <NavLink className="link" to="/MentalHealth">
       Mental Health
     </NavLink>

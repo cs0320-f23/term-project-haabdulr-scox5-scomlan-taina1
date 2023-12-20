@@ -1,6 +1,6 @@
 import React from "react";
 import SubPage from "../SubPage.tsx";
-import InteractiveImage from "../InteractiveImage.tsx";
+// import InteractiveImage from "../InteractiveImage.tsx";
 import ImageOverlay from "../ImageOverlay.tsx";
 import primaryOffice from "../../images/PrimaryCareOffice.png";
 
