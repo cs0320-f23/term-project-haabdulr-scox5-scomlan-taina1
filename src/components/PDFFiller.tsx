@@ -63,12 +63,17 @@ outputs:
 
 
 export async function savePDF(pdf_text : Map<string, string|boolean>, link_to_pdf : string) {
-    const output = await loadPDF(link_to_pdf)
+    try{
+        const output = await loadPDF(link_to_pdf)
 
-    const pdf_array = await fillPDF(output, pdf_text)
+        const pdf_array = await fillPDF(output, pdf_text)
 
-    //here we would send it back to the backend to be saved!
-    console.log("PDF saved!")
+        //here we would send it back to the backend to be saved!
+        console.log("PDF saved!")
+    } catch (err) {
+        console.log("PDF could not be saved: " + err)
+        alert("PDF could not be saved!")
+    }
 }
 
 /*
@@ -84,19 +89,24 @@ outputs:
 */
 
 export async function downloadPDF(pdf_text : Map<string, string|boolean>, link_to_pdf : string) {
-    const output = await loadPDF(link_to_pdf)
+    try {
+        const output = await loadPDF(link_to_pdf)
 
-    const pdf_array = await fillPDF(output, pdf_text)
-    
+        const pdf_array = await fillPDF(output, pdf_text)
+        
 
-    let blob = new Blob([pdf_array], {"type": "application/pdf"});
+        let blob = new Blob([pdf_array], {"type": "application/pdf"});
 
-    let link = document.createElement("a");
+        let link = document.createElement("a");
 
-    link.href = URL.createObjectURL(blob);
+        link.href = URL.createObjectURL(blob);
 
-    link.download = 'medical_information_form_filled';
+        link.download = 'medical_information_form_filled';
 
-    link.click();
+        link.click();
+    } catch (err) {
+        console.log("PDF could not be downloaded: " + err)
+        alert("PDF could not be downloaded!")
+    }
 }
 
