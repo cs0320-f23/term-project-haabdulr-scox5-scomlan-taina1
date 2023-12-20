@@ -15,7 +15,6 @@ const Main = () => (
     <Route path="/PrimaryCare" Component={PrimaryCare}></Route>
     <Route path="/Medicaid" Component={Medicaid}></Route>
     <Route path="/UrgentCare" Component={UrgentCare}></Route>
-
     {/* <Route path="/Prescription" Component={PrescriptionMedication}></Route> */}
   </Routes>
 );
