@@ -40,7 +40,7 @@ const Home: React.FC = () => {
     );
   };
 
-  // Automatically rotate the carousel every 5 seconds (adjust as needed)
+  // Automatically rotate the carousel every 5 seconds (5000ms)
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleNextSlide();

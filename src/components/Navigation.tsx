@@ -1,16 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navigation.scss";
+import "../styles/LoginPage.scss";
+
+
 
 const Navigation = () => (
   <nav className="centered-navigation">
-    <div className="logo">
-      <img src="https://www.transitionalhousing.org/gallery/2960_amoshouse_com.jpg" alt="Logo" />
-    </div>
+          <div className="logo">
+        <img src="https://www.transitionalhousing.org/gallery/2960_amoshouse_com.jpg" alt="Logo" />
+      </div>
     <NavLink className="link" to="/">
       Home
     </NavLink>
-    <div className="link with-dropdown">
+    <NavLink className="link" to="/types-of-care">
       Types of Care
       <div className="dropdown-content">
         <NavLink to="/PrimaryCare">Primary Care</NavLink>
@@ -18,7 +21,7 @@ const Navigation = () => (
         <NavLink to="/DentalCare">Dental Care</NavLink>
         <NavLink to="/SpecializedCare">Specialized Care</NavLink>
       </div>
-    </div>
+    </NavLink>
     <NavLink className="link" to="/MentalHealth">
       Mental Health
     </NavLink>
@@ -33,7 +36,7 @@ const Navigation = () => (
     </div>
     {/* Log In and Sign Up buttons */}
     <div className="auth-buttons">
-      <NavLink className="link login" to="/login">
+      <NavLink className="link login" to="/LoginPage">
         Log In
       </NavLink>
       <NavLink className="link signup" to="/signup">
