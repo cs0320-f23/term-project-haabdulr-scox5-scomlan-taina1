@@ -4,6 +4,9 @@ import "../styles/Navigation.scss";
 
 const Navigation = () => (
   <nav className="centered-navigation">
+          <div className="logo">
+        <img src="https://www.transitionalhousing.org/gallery/2960_amoshouse_com.jpg" alt="Logo" />
+      </div>
     <NavLink className="link" to="/">
       Home
     </NavLink>
@@ -25,9 +28,6 @@ const Navigation = () => (
     <NavLink className="link" to="/PrescriptionMedication">
       Prescription Medication
     </NavLink>
-    <NavLink className="link" to="/Telehealth">
-      Telehealth
-    </NavLink>
     <div className="search-container">
       <input type="text" placeholder="Search..." />
     </div>
@@ -36,7 +36,7 @@ const Navigation = () => (
       <NavLink className="link login" to="/login">
         Log In
       </NavLink>
-      <NavLink className="link login" to="/signup">
+      <NavLink className="link signup" to="/signup">
         Sign Up
       </NavLink>
     </div>

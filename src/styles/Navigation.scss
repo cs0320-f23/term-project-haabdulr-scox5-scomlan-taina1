@@ -2,20 +2,21 @@
 
 .centered-navigation {
   display: flex;
-  justify-content: center;
-  margin-top: 15px;
+  justify-content: space-between; /* Adjust alignment based on your preference */
+  // margin-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
 
   padding-bottom: 10px;
   padding-top: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-  width: 95%;
+  width: 100%;
   align-items: center;
-  background-color: $secondary-background-color;
-  border-radius: 0.5 * $big-border-radius;
+  background-color: #10C0DF;;
+  // border-radius: 0.5 * $big-border-radius;
 }
+
 
 .link {
   margin: 0 15px;
@@ -31,12 +32,12 @@
   // border-radius: 10px;
 
   &:hover {
-    color: #888; 
+    color: #000000; 
   }
 
   &.active {
       font-weight: bold;
-      color: #00A6C3; // Change to the desired blue color
+      color: #000000; // Change to the desired blue color
 
 }
 }
@@ -87,7 +88,39 @@
 .auth-buttons .login {
   padding: 3%;
   padding-inline: 10px;
-  background-color: $yellow-background-color;
+  background-color: #3498db; /* Update with your preferred color for login */
   border-radius: 6px;
   font-weight: bold;
+  color: #fff; /* Text color */
+  &:hover {
+    color: #000000; 
+  }
+
+  &.active {
+      font-weight: bold;
+      color: #000000; // Change to the desired blue color
+
 }
+}
+.auth-buttons .signup {
+  padding: 3%;
+  padding-inline: 10px;
+  background-color: #FFBD59; /* Update with your preferred color for signup */
+  border-radius: 6px;
+  font-weight: bold;
+  color: #000000; /* Text color */
+
+
+  &:hover {
+    color: #000000;
+    background-color: #f7d8aa; 
+
+  }
+
+  &.active {
+      color: #000000;
+      background-color: #f9a323; // Change to the desired blue color
+
+}
+}
+

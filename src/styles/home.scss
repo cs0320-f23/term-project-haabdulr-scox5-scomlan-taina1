@@ -2,29 +2,68 @@
 
 #home {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
+
+// #home {
+//   height: 100%;
+//   width: 80%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   min-height: 60vh;
+//   align-self: center;
+// }
 }
 
 ol {
   text-align: start;
 }
 
-#left li,
-#right li {
-  margin-bottom: 4%;
-  font-family: Arial;
-  letter-spacing: -1;
+// #left li,
+// #right li {
+//   margin-bottom: 4%;
+//   font-family: Arial;
+//   letter-spacing: -1;
 
-}
+// }
 
 .carousel-container {
-  position: relative; /* Add relative positioning to the container */
-
+  position: relative;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
-  // padding-bottom: 1000px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1.0;
+  width: 100%;
+  // background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(19, 255, 110, 0.9)), changeBackground;
 
+  animation: changeBackground 30s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.522), rgba(0, 0, 0, 0.7)),
+      url("https://media.istockphoto.com/id/967099380/photo/providence-rhode-island-usa-river-skyline.webp?b=1&s=170667a&w=0&k=20&c=dRNhatoRgYBIwh-COD8BcwRnooXtxm4Bj_Aftu4HLsQ=");
+  }
+  25% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.522), rgba(0, 0, 0, 0.7)),
+      url("https://live.staticflickr.com/7338/15766199013_88168409b5_b.jpg");
+  }
+  50% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.522), rgba(0, 0, 0, 0.7)),
+      url("https://cdn.pixabay.com/photo/2017/10/09/02/48/rhode-island-2832284_1280.jpg");
+  }
+  75% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.522), rgba(0, 0, 0, 0.7)),
+      url("https://images.pond5.com/4k-ultrahd-timelapse-providence-rhode-footage-074753659_iconl.jpeg");
+  }
+  100% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.522), rgba(0, 0, 0, 0.7)),
+      url("https://media.istockphoto.com/id/1256404841/photo/autumn-in-providence-rhode-island.jpg?s=612x612&w=0&k=20&c=-M6xtbIHREZbQJVfnXjegAarp8RY58LY3eGMhHYq2nQ=");
+  }
 }
 
 .carousel-controls {
@@ -41,7 +80,7 @@ ol {
   color: #94e2f0;
   background-color: transparent; 
   border: none; 
-  font-weight: bold; /* Make the text bold */
+  font-weight: bold;
   transition: color 0.3s ease-in-out, 
   font-weight 0.3s ease-in-out;
 
@@ -51,17 +90,14 @@ ol {
   }
 }
 
-#left,
-#right {
-  flex: 1;
-}
 
 #title-description {
   font-size: 1.5rem;
   font-family: Arial;
-  padding-right: 10%;
-  padding-left: 10%;
-  letter-spacing: -0.5px;
+  color: #FFBD59;
+  // padding-right: 10%;
+  // padding-left: 10%;
+  // letter-spacing: -0.5px;
 }
 
 #title { //this is also where the box/carousel is designed
@@ -70,18 +106,18 @@ ol {
     justify-content: center;
     // align-items: 5000px;  
     text-align: center;
-    background-color: $secondary-background-color;
-    width: 90%;
+    background-color: transparent;
+    width: 100%;
     font-family: Anton;
     font-size: 30px;
     font-weight: light;
-    color: #000;
-    align-self: center;
-    border-radius: $big-border-radius;
-    margin: 1.5% 3%;
+    color: #ffffff;
+    // align-self: center;
+    // border-radius: $big-border-radius;
+    // margin: 1.5% 3%;
     padding-top: 9%;
-    padding-bottom: 30%;
-    box-shadow: $box-shadow;
+    padding-bottom: 20%;
+    // box-shadow: $box-shadow;
   }
 
 
@@ -93,33 +129,24 @@ ol {
 }
 
 .rest-of-paragraph {
-  display: inline; // Make it inline
-}
-
-
-.first-text {
-  color: black;
   display: inline; 
-}
-
-.red-text{
-  color: rgb(255, 0, 0);
-  display: inline; 
-  font-weight: bold;
+  
 }
 
 
+// .first-text {
+//   color: black;
+//   display: inline; 
+// }
 
-#home {
-  height: 100%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: 60vh;
-  align-self: center;
-}
+// .red-text{
+//   color: rgb(255, 0, 0);
+//   display: inline; 
+//   font-weight: bold;
+// }
+
+
+
 
 #sub-items-home {
   display: flex;
@@ -130,29 +157,55 @@ ol {
   margin: 4% 6%;
 }
 
-#left,
-#right {
-  border-radius: $big-border-radius;
-  padding: 3%;
-  width: 30%;
+
+#why {
+  display: flex;
+  // width: 100%;
+  flex-direction: row;
+  // justify-content: space-between;
+  align-items: center;
+  font-family: Anton;
+  background-color: #FFBD59; 
+  font-size: 70px;
+  padding-left: 10%;
 
 }
 
-#left h2 {
-  font-family: Anton;;
+
+#answer {
+  font-size: 1.5rem;
+  font-family: Arial;
+  color: #000000;
+  padding-right: 10%;
+  padding-left: 10%;
+  // letter-spacing: -0.5px;
 }
 
-#right h2 {
-  font-family: Anton;;
-}
 
-#left {
-  background-color: #07BAD9;
-}
 
-#right {
-  background-color: $yellow-background-color;
-}
+// #left,
+// #right {
+//   border-radius: $big-border-radius;
+//   padding: 3%;
+//   width: 30%;
+
+// }
+
+// #left h2 {
+//   font-family: Anton;;
+// }
+
+// #right h2 {
+//   font-family: Anton;;
+// }
+
+// #left {
+//   background-color: #07BAD9;
+// }
+
+// #right {
+//   background-color: $yellow-background-color;
+// }
 
 /* HomeSlider.css */
 
