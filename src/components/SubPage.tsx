@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./accordion.tsx";
 import "../styles/mentalHealth.scss";
 import "../styles/subPage.scss";
+import { savePDF } from "./PDFFiller.tsx"; // Import your PDF handling functions
 
 const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
   const [formData, setFormData] = useState(initialFormData);
@@ -16,22 +17,28 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
 
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  /**
-   * collapses or uncollapses the notes
-   */
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  /**
-   * scrolls down to the notes section
-   */
   const handleScrollToNotes = () => {
     setIsCollapsed(false);
     const showNotesSection = document.getElementById("show-notes-button");
 
     if (showNotesSection) {
       showNotesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Pass the form data and your PDF link to savePDF function
+      await savePDF(formData, '/path/to/your/fillable.pdf');
+      alert("PDF saved successfully!");
+    } catch (error) {
+      console.error("Error saving PDF:", error);
+      alert("Failed to save PDF.");
     }
   };
 
@@ -50,15 +57,11 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
             <button className="sidebar-button" onClick={() => window.print()}>
               🖨️ Print <br></br>Entire Page
             </button>
-            <button
-              className="sidebar-button"
-              onClick={() => console.log("Download")}
-            >
-              📥 Download <br></br> Notes
+            <button className="sidebar-button" onClick={handleSubmit}>
+              📥 Save <br></br> Notes
             </button>
           </div>
         </div>
-        {/* Dropdown button */}
         <button
           onClick={toggleCollapse}
           className="sidebar-button"
@@ -66,8 +69,6 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
         >
           Show Notes
         </button>
-
-        {/* Collapsible div */}
         {!isCollapsed && (
           <div className="PDF-container">
             <div className="PDF-header">
@@ -75,7 +76,6 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
               <h2 id="subtitle-PDF">{title}</h2>
             </div>
             <div className="PDF">
-              {/* Example form using the provided formData and handleInputChange */}
               <div className="PDF-content">
                 <form className="PDF-form">
                   {formQuestions.map((question, index) => (
@@ -112,3 +112,4 @@ const SubPage = ({ accordionData, title, initialFormData, formQuestions }) => {
 };
 
 export default SubPage;
+

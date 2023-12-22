@@ -77,8 +77,8 @@ const Home: React.FC = () => {
           <p id="title-description">{carouselData[activeSlide].description}</p>
         </div>
         <div className="carousel-controls">
-          <button onClick={handlePrevSlide}>&#x2329;</button>
-          <button onClick={handleNextSlide}>&#x232A;</button>
+          {/* <button onClick={handlePrevSlide}>&#x2329;</button>
+          <button onClick={handleNextSlide}>&#x232A;</button> */}
         </div>
       </div>
       <div id="sub-items-home">
