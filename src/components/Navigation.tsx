@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navigation.scss";
 import "../styles/LoginPage.scss";
+import "../styles/SignUp.scss";
+
 
 
 
@@ -39,7 +41,7 @@ const Navigation = () => (
       <NavLink className="link login" to="/LoginPage">
         Log In
       </NavLink>
-      <NavLink className="link signup" to="/signup">
+      <NavLink className="link signup" to="/SignUp">
         Sign Up
       </NavLink>
     </div>

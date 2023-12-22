@@ -7,6 +7,8 @@ import PrimaryCare from "./pages/PrimaryCare.tsx";
 import Medicaid from "./pages/Medicaid.tsx";
 import UrgentCare from "./pages/UrgentCare.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
+import SignUp from "./pages/SignUp.tsx";
+
 
 
 const Main = () => (
@@ -17,6 +19,8 @@ const Main = () => (
     <Route path="/Medicaid" Component={Medicaid}></Route>
     <Route path="/UrgentCare" Component={UrgentCare}></Route>
     <Route path="/LoginPage" Component={LoginPage}></Route>
+    <Route path="/SignUp" Component={SignUp}></Route>
+
 
     {/* <Route path="/Prescription" Component={PrescriptionMedication}></Route> */}
   </Routes>
