@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { handleSignIn } from "../firebase.ts"; // Update with the correct path
+import { handleSignIn } from "../firebase.ts"; 
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -12,18 +12,16 @@ const LoginPage = () => {
       setLoading(true);
       setError('');
 
-      // Check password specifications before attempting sign-in
       if (!isPasswordValid(password)) {
         setError('Password must meet specifications.');
         setLoading(false);
         return;
       }
 
-      // Call Firebase authentication method for sign-in
+      // firebase authentication method for sign-in
       await handleSignIn(email, password);
 
       console.log('User logged in successfully');
-      // You can redirect the user to another page or perform additional actions here
     } catch (error) {
       console.error('Error logging in:', error);
       setError('Invalid email or password');
@@ -32,7 +30,6 @@ const LoginPage = () => {
     }
   };
 
-  // Function to check if the password meets specifications
   const isPasswordValid = (password) => {
     // Password must be at least 8 characters long and contain at least one special character
     const minLength = 8;
@@ -68,7 +65,8 @@ const LoginPage = () => {
       </label>
       <p className="password-requirements">Password must be at least 8 characters long 
       <br />
-      Password must contain at least one special character.</p>
+      Password must contain at least one special character.
+      </p>
       <br />
       {error && <p id="login-error-message" className="login-error" style={{ color: 'red' }}>{error}</p>}
       <button onClick={handleLogin} id="login-button" className="login-button" disabled={loading}>
