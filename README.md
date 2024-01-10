@@ -100,10 +100,10 @@ Key features:
 `PDFFiller.tsx` contains functions essential for working with PDF files. It provides functionalities for loading, filling, saving, and downloading PDFs. The file interacts with the `pdf-lib` library to handle PDF manipulation. It can be easily integrated into a React application to handle dynamic PDF generation and modification.
 
 Key functions:
-- `loadPDF(link_to_pdf: string): Promise<PDFDocument>`: Loads a fillable PDF from a given link.
-- `fillPDF(pdf: PDFDocument, pdf_text: Map<string, string | boolean>): Promise<Uint8Array>`: Fills the PDF with provided data.
-- `savePDF(pdf_text: Map<string, string | boolean>, link_to_pdf: string): Promise<void>`: Saves the filled PDF.
-- `downloadPDF(pdf_text: Map<string, string | boolean>, link_to_pdf: string): Promise<void>`: Downloads the filled PDF.
+- `loadPDF`: Loads a fillable PDF from a given link.
+- `fillPDF`: Fills the PDF with provided data.
+- `savePDF`: Saves the filled PDF.
+- `downloadPDF`: Downloads the filled PDF.
 ##
 `SubPage.tsx` is a React component that represents a sub-page within the application. It combines an accordion for organized content display, a sidebar for additional actions, and a PDF container for note-taking. This component is versatile and can be reused for different sub-pages with varying content and functionality.
 
