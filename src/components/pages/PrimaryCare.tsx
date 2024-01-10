@@ -2,7 +2,7 @@ import React from "react";
 import SubPage from "../SubPage.tsx";
 // import InteractiveImage from "../InteractiveImage.tsx";
 import ImageOverlay from "../ImageOverlay.tsx";
-import primaryOffice from "../../images/PrimaryCareOffice.png";
+import primaryOffice from "../../assets/primaryOffice.png";
 
 /**
  * the highlighted areas on the image in the section titled "What does a primary care visit look like?"
